@@ -22,9 +22,10 @@ class Happy(Smiley, Blinkable):
         """
         Method that draws the mouth on the standard faceless smiley.
         """
-        mouth = [41, 46, 50, 51, 52, 53]
+        mouth = [41, 46, 50, 51, 52, 53]  # correspond to pixels on display counting from left to right top to bottom
         for pixel in mouth:
             self.pixels[pixel] = self.BLANK
+            # for each pixel location in mouth, the pixel corresponding that location is turned off
 
     def draw_eyes(self, wide_open=True):
         """
