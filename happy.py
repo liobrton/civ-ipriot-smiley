@@ -10,10 +10,11 @@ class Happy(Smiley, Blinkable):
     Note that Blinkable is an interface (an abstract base
     class that only contains an abstract method). By subclassing
     Blinkable, this class promises to implement the abstract
-    method.See {meth:blink} below.
+    method. See {meth:blink} below.
     """
     def __init__(self):
-        super().__init__()
+        super().__init__()  # used to give access to parent properties and methods
+        # super refers to the superclass (opposite of subclass, so its the parent class)
 
         self.draw_mouth()
         self.draw_eyes()
@@ -34,7 +35,7 @@ class Happy(Smiley, Blinkable):
         """
         eyes = [10, 13, 18, 21]
         for pixel in eyes:
-            self.pixels[pixel] = self.BLANK if wide_open else self.YELLOW
+            self.pixels[pixel] = self.BLANK if wide_open else self.complexion()
 
     def blink(self, delay=0.25):
         """
