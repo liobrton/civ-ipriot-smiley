@@ -1,8 +1,9 @@
 from smiley import Smiley
+from blinkable import Blinkable
 import time
 
 
-class Angry(Smiley):
+class Angry(Smiley, Blinkable):
     def __init__(self):
         super().__init__(complexion=self.RED)
 

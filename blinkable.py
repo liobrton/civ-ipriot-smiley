@@ -9,5 +9,4 @@ class Blinkable(ABC):
     by subclasses that promise to implement it.
     """
     @abstractmethod
-    def blink(self):
-        pass
+    def blink(self): ...

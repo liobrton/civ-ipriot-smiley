@@ -1,9 +1,10 @@
 from smiley import Smiley
-# from blinkable import Blinkable
+from blinkable import Blinkable
 import time
 
 
-class Sad(Smiley):
+
+class Sad(Smiley, Blinkable):
     def __init__(self):
         super().__init__(complexion=self.BLUE)
 
