@@ -15,7 +15,7 @@ class Smiley:
 
         self.my_complexion = complexion
 
-        Y = complexion
+        Y = self.my_complexion
         O = self.BLANK
         self.pixels = [
             O, Y, Y, Y, Y, Y, Y, O,

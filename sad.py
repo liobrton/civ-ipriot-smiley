@@ -3,7 +3,6 @@ from blinkable import Blinkable
 import time
 
 
-
 class Sad(Smiley, Blinkable):
     def __init__(self):
         super().__init__(complexion=self.BLUE)
@@ -24,10 +23,7 @@ class Sad(Smiley, Blinkable):
         Method that draws the eyes (open or closed) on the standard smiley.
         :param wide_open: True if eyes opened, False otherwise
         """
-        if blinking is True:
-            eyes = [10, 13]
-        else:
-            eyes = [10, 13, 18, 21]
+        eyes = [10, 13, 18, 21]
         for pixel in eyes:
             self.pixels[pixel] = self.BLANK if wide_open else self.complexion()
 
@@ -39,10 +35,7 @@ class Sad(Smiley, Blinkable):
 
         :param delay: Delay in seconds
         """
-        self.draw_eyes(wide_open=False, blinking=True)
-        self.show()
-        time.sleep(0.000001)
-        self.draw_eyes(wide_open=False, blinking=False)
+        self.draw_eyes(wide_open=False)
         self.show()
         time.sleep(delay)
         self.draw_eyes(wide_open=True)
